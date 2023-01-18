@@ -1,0 +1,142 @@
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --medium-grey-alpha: hsla(216, 12%, 54%, 20%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+.button {
+  font-family: "Overpass", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+  height: 100vh;
+}
+
+body,
+.rate-form__rate-container,
+.rate-form__rate-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rate-form__rate-button,
+.button {
+  cursor: pointer;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+/* Card settings */
+.rating-card {
+  
+  background-color: var(--dark-blue);
+  width: 345px;
+  height: 385px;
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.rating-card__star {
+  background-color: var(--medium-grey-alpha);
+  padding: 1rem;
+  border-radius: 50%;
+}
+
+.rating-card__text-content {
+  margin: 2rem 0;
+}
+
+.rating-card__header {
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+
+.rating-card__text {
+  color: var(--light-grey);
+}
+
+/* rates section settings*/
+.rate-form__radio-input {
+  display: none;
+}
+
+.rate-form__rate-container {
+  justify-content: space-between;
+}
+
+/* custom radio button settings */
+.rate-form__rate-button {
+  background-color: var(--medium-grey-alpha);
+  color: var(--light-grey);
+  height: 3rem;
+  width: 3rem;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: 0.25s ease-in-out;
+}
+
+.rate-form__rate-button:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+input:checked ~ .rate-form__rate-button {
+  background-color: var(--medium-grey);
+  color: var(--white);
+}
+input:checked ~ .rate-form__rate-button:hover {
+  background-color: var(--light-grey);
+}
+
+/* button settings */
+.button {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 3rem;
+  display: block;
+  margin: 2rem auto 0;
+  width: 100%;
+  height: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  transition: 0.25s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+/* thank you state */
+
+.rating-card__image,
+.selected {
+    display: block;
+    margin: 1rem auto;
+}
+
+.selected {
+    padding: .7rem;
+    border-radius: 2rem;
+    width: 190px;
+    background-color: var(--medium-grey-alpha);
+    color: var(--orange);
+}
